@@ -1,0 +1,233 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0a0a0a; /* Deep Black */
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #00BFFF; /* Sky Blue */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: rgba(10, 10, 10, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #00BFFF;
+}
+
+.logo a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00BFFF;
+    text-decoration: none;
+    border: 2px solid #00BFFF;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.logo a:hover {
+    background: #00BFFF;
+    color: #0a0a0a;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00BFFF;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    margin-bottom: 30px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00BFFF;
+    transform: translateY(-5px);
+}
+
+.btn {
+    padding: 12px 30px;
+    background: #00BFFF;
+    color: #0a0a0a;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #fff;
+}
+
+/* Sections */
+section {
+    padding: 100px 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+/* Projects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: 0.5s;
+}
+
+.project-card:hover {
+    border-color: #00BFFF;
+    transform: scale(1.02);
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #00BFFF;
+    text-decoration: none;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+    background: #111;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #333;
+}
+
+
+.resume-btn {
+  background: transparent;
+  border: 2px solid #00c6ff;
+  color: #00c6ff;
+  margin-left: 5px;
+}
+
+.resume-btn:hover {
+  background: #00c6ff;
+  color: #000;
+}
+/* Resume section button spacing fix */
+.resume-card .resume-btn {
+  margin-top: 25px;   /* Download Resume button niche aayega */
+  display: inline-block;
+}
+
+.resume-card .project-link {
+  margin-top: 15px;   /* View Online aur niche */
+  display: inline-block;
+}
+
+
+
+
+/* 1. Glowing Cursor Style */
+#cursor-glow {
+    width: 20px;
+    height: 20px;
+    background: #00BFFF;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none; /* Isse scroll ya click nahi rukega */
+    z-index: 9999;
+    box-shadow: 0 0 15px #00BFFF, 0 0 30px #00BFFF;
+    transition: transform 0.1s ease-out;
+    mix-blend-mode: screen;
+}
+
+/* 2. 3D Card Animation */
+.project-card, .resume-card {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: 0.3s;
+}
+
+/* 3. Hero Text Floating Animation */
+.hero-content h1 {
+    display: inline-block;
+    animation: floatAnim 3s ease-in-out infinite;
+}
+
+@keyframes floatAnim {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+
+
+
+
+
